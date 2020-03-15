@@ -8,8 +8,12 @@ fi
 if [ ! -f /aria2/conf/on-complete.sh ]; then
 	cp /aria2/conf-temp/on-complete.sh /aria2/conf/on-complete.sh
 fi
+if [ ! -f /aria2/conf/delete.sh ]; then
+	cp /aria2/conf-temp/delete.sh /aria2/conf/delete.sh
+fi
 
 chmod +x /aria2/conf/on-complete.sh
+chmod +x /aria2/conf/delete.sh
 touch /aria2/conf/aria2.session
 
 darkhttpd /aria-ng --port 80 &
