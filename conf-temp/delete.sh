@@ -1,6 +1,6 @@
 #!/bin/bash
 
-downloadpath='/downloads'
+downloadpath='/aria2/downloads'
 
 filepath=$3
 rdp=${filepath#${downloadpath}/}
