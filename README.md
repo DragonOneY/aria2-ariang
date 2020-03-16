@@ -24,7 +24,7 @@ docker build -t player/aria2-ariang .
 Run command like below(You may need to change the ports).
 ```
 docker run --name aria2-ariang \
--p 6800:6800 -p 6880:80 -p 6881:6881 \
+-p 6800:6800 -p 6880:80 -p 6881:6881 -p 6881:6881/udp \
 -v /DOWNLOAD_DIR:/aria2/downloads \
 -v /CONFIG_DIR:/aria2/conf \
 -e SECRET=YOUR_SECRET_CODE colinwjd/aria2-ariang
