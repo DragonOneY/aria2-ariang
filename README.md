@@ -18,7 +18,7 @@ docker build -t player/aria2-ariang .
 2. Mapping ports:
   * 6800 for aira2 service
   * 80 for Aria-Ng http service
-  * 8080 for downloads directory http service
+  * 6881 for BT and DHT listening
 3. Set your secret code use "SECRET" variable, this will append `rpc-secret=xxx` to aira2.conf file.
 
 Run command like below(You may need to change the ports).
