@@ -14,6 +14,6 @@ COPY conf-temp /aria2/conf-temp
 
 WORKDIR /
 VOLUME ["/aria2/conf", "/aria2/downloads"]
-EXPOSE 6800 80 6881
+EXPOSE 6800 80 6881 6881/udp
 
 CMD ["/aria2/init.sh"]
