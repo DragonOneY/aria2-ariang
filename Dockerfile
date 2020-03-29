@@ -4,7 +4,8 @@ MAINTAINER colinwjd <wjdwjd@live.cn>
 
 RUN apk update \
 	&& apk add --no-cache --update aria2 darkhttpd tzdata\
-        && cp -r -f /usr/share/zoneinfo/Hongkong /etc/localtime \
+        &&cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+        && echo "Asia/Shanghai" > /etc/timezone \
 	&& mkdir -p aria2/conf aria2/conf-temp aria2/downloads aria-ng \
 	&& wget --no-check-certificate https://github.com/mayswind/AriaNg/releases/download/1.1.4/AriaNg-1.1.4.zip \
 	&& unzip AriaNg-1.1.4.zip -d aria-ng \
