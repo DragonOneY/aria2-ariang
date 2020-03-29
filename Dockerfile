@@ -8,6 +8,9 @@ RUN apk update \
 	&& wget --no-check-certificate https://github.com/mayswind/AriaNg/releases/download/1.1.4/AriaNg-1.1.4.zip \
 	&& unzip AriaNg-1.1.4.zip -d aria-ng \
 	&& rm -rf AriaNg-1.1.4.zip
+RUN apk add tzdata && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+&& echo "Asia/Shanghai" > /etc/timezone \
+&& apk del tzdata
 
 COPY init.sh /aria2/init.sh
 COPY conf-temp /aria2/conf-temp
