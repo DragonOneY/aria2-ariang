@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 downloadpath='/aria2/downloads'
 
