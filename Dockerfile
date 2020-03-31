@@ -3,7 +3,7 @@ FROM alpine:latest
 MAINTAINER player1311 <player1311@gmail.com>
 
 RUN apk update \
-	&& apk add --no-cache --update aria2 darkhttpd openssl tzdata \
+	&& apk add --no-cache --update aria2 darkhttpd openssl wget tzdata \
 	&& cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 	&& apk del tzdata \
 	&& mkdir -p aria2/conf aria2/conf-temp aria2/downloads aria-ng \
