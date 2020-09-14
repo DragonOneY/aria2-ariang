@@ -8,8 +8,8 @@ RUN apk update \
 	&& apk del tzdata \
 	&& mkdir -p aria2/conf aria2/conf-temp aria2/downloads aria-ng \
 	&& wget --no-check-certificate https://github.com/mayswind/AriaNg/releases/download/1.1.7/AriaNg-1.1.7.zip \
-	&& unzip AriaNg-1.1.4.zip -d aria-ng \
-	&& rm -rf AriaNg-1.1.4.zip
+	&& unzip AriaNg-1.1.7.zip -d aria-ng \
+	&& rm -rf AriaNg-1.1.7.zip
 
 COPY init.sh /aria2/init.sh
 COPY conf-temp /aria2/conf-temp
